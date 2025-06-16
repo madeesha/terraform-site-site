@@ -4,7 +4,8 @@ locals {
 }
 
 module "site-to-site-vpn" {
-    source = "git::ssh://git@github.com/TallyIt/tally-terraform-aws-modules.git//terraform-aws-site-to-site-vpn?ref=main"
+    source = "git::ssh://git@github.com/madeesha/aws-modules//terraform-aws-site-to-site-vpn/site-to-site-vpn?ref=main"
+    
     
     # Use the merged configuration from locals
     name                                 = local.config.name

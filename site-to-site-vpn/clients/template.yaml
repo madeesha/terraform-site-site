@@ -1,0 +1,71 @@
+---
+# Template client configuration
+# Copy this file and rename it to match your workspace name (e.g., client_name.yaml)
+
+# Required fields
+name: "aws-tg-client-name-office"  # Replace with actual client name
+customer_gateway_ip_address: "x.x.x.x"  # Replace with actual IP address
+
+# Optional overrides - uncomment and modify as needed
+# -----------------------------------------------------
+# BGP ASN
+# bgp_asn: 65000
+
+# VPN Type
+# type: "ipsec.1"
+
+# Static Routes
+# static_routes_only: true
+
+# Tunnel 1 Configuration
+# tunnel1_ike_versions:
+#   - "ikev1"
+#   - "ikev2"
+# tunnel1_startup_action: "add"
+# tunnel1_phase1_dh_group_numbers:
+#   - 2
+#   - 14
+#   - 15
+#   - 16
+# tunnel1_phase1_encryption_algorithms:
+#   - "AES128"
+#   - "AES256"
+# tunnel1_phase1_integrity_algorithms:
+#   - "SHA1"
+#   - "SHA2-256"
+# tunnel1_phase2_dh_group_numbers:
+#   - 2
+#   - 5
+#   - 14
+# tunnel1_phase2_encryption_algorithms:
+#   - "AES128"
+#   - "AES256"
+# tunnel1_phase2_integrity_algorithms:
+#   - "SHA1"
+#   - "SHA2-256"
+
+# Tunnel 2 Configuration
+# tunnel2_ike_versions:
+#   - "ikev1"
+#   - "ikev2"
+# tunnel2_startup_action: "add"
+# tunnel2_phase1_dh_group_numbers:
+#   - 2
+#   - 14
+#   - 15
+# tunnel2_phase1_encryption_algorithms:
+#   - "AES128"
+#   - "AES256"
+# tunnel2_phase1_integrity_algorithms:
+#   - "SHA1"
+#   - "SHA2-256"
+# tunnel2_phase2_dh_group_numbers:
+#   - 2
+#   - 5
+#   - 14
+# tunnel2_phase2_encryption_algorithms:
+#   - "AES128"
+#   - "AES256"
+# tunnel2_phase2_integrity_algorithms:
+#   - "SHA1"
+#   - "SHA2-256"

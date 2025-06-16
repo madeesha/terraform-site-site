@@ -1,0 +1,14 @@
+---
+# Alinta client configuration
+name: "aws-tg-alinta-office"
+customer_gateway_ip_address: "103.153.236.210"
+
+# Optional overrides - uncomment and modify as needed
+# tunnel1_ike_versions:
+#   - "ikev2"
+# 
+# tunnel1_phase1_encryption_algorithms:
+#   - "AES256"
+#   - "AES256-GCM-16"
+#
+# bgp_asn: 65000

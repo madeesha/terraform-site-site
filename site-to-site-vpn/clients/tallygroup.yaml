@@ -1,0 +1,15 @@
+---
+# Tallygroup client configuration
+name: "aws-tg-melb-office"
+customer_gateway_ip_address: "220.244.207.94"
+
+# Optional overrides - uncomment and modify as needed
+# tunnel2_phase1_dh_group_numbers:
+#   - 14
+#   - 15
+#   - 16
+#
+# tunnel2_ike_versions:
+#   - "ikev2"
+#
+# bgp_asn: 65000

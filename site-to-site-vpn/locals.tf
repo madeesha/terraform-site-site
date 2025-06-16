@@ -31,7 +31,19 @@ locals {
   # Load the client configuration directly from the workspace-named YAML file if it exists
   current_client_config = local.client_yaml_exists ? yamldecode(file("${path.module}/clients/${terraform.workspace}.yaml")) : {}
 
-  # Merge common configuration with client-specific configuration
-  # Client-specific values take precedence over common values
+  # Determine if this is a legacy single gateway config or new multi-gateway config
+  is_legacy_config = can(local.current_client_config.customer_gateway_ip_address)
+  
+  # Create customer gateway configurations
+  # For non HA configs, create a single gateway
+  # For HA cofigs, creates multiple gateways
+  customer_gateways = local.is_legacy_config ? {
+    "gateway-1" = merge(local.common_config, local.current_client_config)
+  } : {
+    for idx, gateway in local.current_client_config.customer_gateways : 
+    "gateway-${idx + 1}" => merge(local.common_config, gateway, {
+      name = "${local.current_client_config.name}-${idx + 1}"
+    })
+  }
   config = merge(local.common_config, local.current_client_config)
 }

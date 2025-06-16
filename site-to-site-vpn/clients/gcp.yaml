@@ -1,0 +1,18 @@
+
+---
+# GCP client configuration for HA setup
+name: "aws-tg-gcp"
+
+# Customer gateways for HA setup
+customer_gateways:
+  - customer_gateway_ip_address: "34.128.36.134"  
+    tunnel1_ike_versions:
+      - "ikev2"
+    tunnel2_ike_versions:
+      - "ikev2"
+  
+  - customer_gateway_ip_address: "34.128.48.152"
+    tunnel1_ike_versions:
+      - "ikev2"
+    tunnel2_ike_versions:
+      - "ikev2"
